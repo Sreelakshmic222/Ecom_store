@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
-
+from django.views import View
 # Create your views here.
 from .forms import NewUserForm
 
@@ -37,6 +37,11 @@ def login_request(request):
             messages.error(request, "Invalid username or password.")
     form = AuthenticationForm()
     return render(request=request, template_name="accounts/login.html", context={"login_form": form})
+
+class Index(View):
+    def get(self,request,*args,**kwargs):
+        return render(request,'accounts/home.html')
+
 
 def home(request):
     template="accounts/home.html"
