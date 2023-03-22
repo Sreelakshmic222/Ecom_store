@@ -47,3 +47,8 @@ def home(request):
     template="accounts/home.html"
     context={}
     return render(request,template,context)
+
+def about(request):
+    template="accounts/about.html"
+    context={}
+    return render(request,template,context)

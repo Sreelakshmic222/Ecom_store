@@ -1,4 +1,4 @@
-from accounts .views import home
+from accounts .views import home,about
 
 from django.urls import path
 from . import views
@@ -12,5 +12,6 @@ urlpatterns = [
         path("login", views.login_request, name="login"),
         path('',Index.as_view(),name='index'),
         path('home/',home,name="home"),
+        path('about/',about,name="about"),
 
 ]
