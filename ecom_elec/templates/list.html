@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><link rel="stylesheet" href="{% static 'css/list.css' %}">
+</head>
+{% block content %}
+<body>
+<div class="container">
+<div class="row">
+    {% for each in object_list %}
+    <div class="col-lg-3 d-flex align-items-stretch mt-5" >
+        <div class="card" id="animate1" data-aos="fade-up" data-aos-once="true" data-aos-delay="500">
+            <img src="{{each.image_url}}" class="card-img-top" alt="..">
+            <div class="card-body">
+                <h5 class="card-title">{{each.name}}</h5>
+                <p class="card-text">Rs/-: {{each.price|floatformat:2}}</p>
+                {% if each.stock_availability is True %}
+                <li class="text-primary">Available</li>
+                {% else %}
+                <li class="text-danger">Out of stock</li>
+                {% endif %}
+                <a href="{% url 'detail-view' each.id %}" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    </div>
+</body>
+{% endblock content %}
+</html>
