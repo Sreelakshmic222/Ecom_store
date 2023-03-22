@@ -6,6 +6,6 @@ urlpatterns=[
     path('details/<int:pk>/',ElecDetailView.as_view(),name='detail-view'),
     path('checkout/<int:pk>/',ElecCheckoutView.as_view(),name='checkout'),
     path('complete',PaymentComplete,name='complete'),
-    path('search/',SearchResultsView.as_view(),name='search'),
+    path('search',SearchResultsView.as_view(),name='search'),
 
 ]

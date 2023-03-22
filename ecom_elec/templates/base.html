@@ -8,7 +8,7 @@
 <body>
 <!--Nav Bar-->
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'list' %}" >Electric Store</a>
+    <a class="navbar-brand" href="{% url 'list' %}" >DayElectricStore</a>
 <!--      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">-->
 
       <div class="btn-group dropright">
@@ -29,7 +29,7 @@
       </div>
 
 <!--Search-->
-    <form class="search"action="#" method="get">
+    <form class="search"action="{%url 'search' %}" method="get">
         <label>search</label>
     <input name="q"class="fas fa-search" type="text" autocomplete="on"
            placeholder="click to search">
@@ -51,74 +51,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-<footer class="text-center text-white" style="background-color: #f1f1f1;">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center text-light p-3" style="background-color: rgba(0,0,0);">
-    © 2020 Copyright:
-    <a class="text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
 </body>
 </html>
