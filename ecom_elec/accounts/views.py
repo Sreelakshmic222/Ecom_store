@@ -52,3 +52,8 @@ def about(request):
     template="accounts/about.html"
     context={}
     return render(request,template,context)
+
+def contact(request):
+    template="accounts/contact.html"
+    context={}
+    return render(request,template,context)

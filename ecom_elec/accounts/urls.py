@@ -1,4 +1,4 @@
-from accounts .views import home,about
+from accounts .views import home,about,contact
 
 from django.urls import path
 from . import views
@@ -13,5 +13,6 @@ urlpatterns = [
         path('',Index.as_view(),name='index'),
         path('home/',home,name="home"),
         path('about/',about,name="about"),
+        path('contact/',contact,name="contact"),
 
 ]
