@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+.card
+    {
+        width: 29%;
+        flex-wrap: wrap;
+        flex: initial;
+    }
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +13,20 @@
     <title>Title</title><link rel="stylesheet" href="{% static 'css/list.css' %}">
 </head>
 {% block content %}
-<body>
+<body style="background:url('https://t4.ftcdn.net/jpg/01/15/04/17/240_F_115041793_FZgCIE8USzIsi2MJudUMbVef3PiYSheX.jpg')no-repeat;background-size:cover;">
 <div class="container">
 <div class="row">
     {% for each in object_list %}
     <div class="col-lg-3 d-flex align-items-stretch mt-5" >
-        <div class="card" id="animate1" data-aos="fade-up" data-aos-once="true" data-aos-delay="500">
-            <img src="{{each.image_url}}" class="card-img-top" alt="..">
+        <div class="card" style="width: 500px; height:500px;">
+            <img src="{{each.image_url}}" class="card-img-top" alt=".." width="300" height="300">
             <div class="card-body">
                 <h5 class="card-title">{{each.name}}</h5>
                 <p class="card-text">Rs/-: {{each.price|floatformat:2}}</p>
                 {% if each.stock_availability is True %}
-                <li class="text-primary">Available</li>
+                <button type="button" class="btn btn-success">Available</button>
                 {% else %}
-                <li class="text-danger">Out of stock</li>
+                <button type="button" class="btn btn-danger">Out of stock</button>
                 {% endif %}
                 <a href="{% url 'detail-view' each.id %}" class="btn btn-primary">View</a>
             </div>

@@ -5,24 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container { display: flex; align-items: stretch; justify-content: space-around; padding: 50px 0; }
+    </style>
 </head>
-<body>
-<div class="card mb3" style="max-width:840px;">
+<body style="background:url('https://t4.ftcdn.net/jpg/01/15/04/17/240_F_115041793_FZgCIE8USzIsi2MJudUMbVef3PiYSheX.jpg')no-repeat;background-size:cover;">
+<div class="container">
+<div class="card" style="max-width:840px;height:300px;">
+    <div class="row no-gutters">
     <div class="col-md-4">
         <img src="{{object.image_url}}" class="card-img">
     </div>
-</div>
 
 <div class="col-md-8">
     <div class="card-body">
         <h4 class="card-title">{{object.name }}</h4>
         <p class="card-text">{{object.description}}</p>
-    </div>
-{% if object.stock_availability is True %}
+        <p><a href="{{ object.follow_company }}">Follow Company</a> </p>
+        <p>Price: $ {{ object.price|floatformat:2 }}</p>
+        {% if object.stock_availability is True %}
 <a href="{% url 'checkout' object.id %}" class="btn btn-outline-success" role="button">Buy Now</a>
 {% else %}
 <h4 class="text-danger">Out of Stock...!</h4>
 {% endif %}
+    </div>
+    </div>
+    </div>
+</div>
 </div>
 </body>
 </html>
