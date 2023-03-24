@@ -18,14 +18,14 @@
           Login conditions
           <div class="dropdown-menu">
               {%if user.is_authenticated%}
-              <a class="dropdown-item" href="{% url 'list'%}">List</a>
+              <a class="dropdown-item" href="{% url 'accounts:home'%}">Logout</a>
               {% else %}
               <a class="dropdown-item text-secondary" href="{% url 'login'%}">Login</a>
               <a class="dropdown-item text-secondary" href="{% url 'register'%}">Register</a>
               {% endif %}
           </div>
       </div>
-<div class="mx-auto" style="width:10px;"
+<div class="mx-auto" style="width:10px;">
       </div>
 
 <!--Search-->

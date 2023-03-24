@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect
 from django.views import View
 # Create your views here.
 from .forms import NewUserForm
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
 
 def register_request(request):
@@ -57,3 +59,7 @@ def contact(request):
     template="accounts/contact.html"
     context={}
     return render(request,template,context)
+
+def signout(request):
+    logout(request)
+    return redirect('login')
