@@ -31,7 +31,9 @@
                 <h4>Total:Rs/-{{object.price|floatformat:2}}</h4>
                 <hr>
                 <div id="paypal-button-container"></div>
-            </div>
+
+            <a href="{% url 'list' %}" class="btn btn-danger" role="button">Cancel Order</a>
+                </div>
 
         </div>
     </div>
