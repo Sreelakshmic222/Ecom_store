@@ -178,6 +178,38 @@ html {
 	display: flex;
 	justify-content: center;
 }
+.text-box{
+color:#000;
+position:absolute;
+bottom:18%;
+margin-left:50px;
+}
+.text-box p{
+font-size:150px;
+font-weight:600;
+}
+.text-box h1{
+font-size:190px;
+line-height:160px;
+margin-left:-10px;
+color:transparent;
+-webkit-text-stroke:1px #000;
+background:url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
+-webkit-background-clip:text;
+background-position:0 0 ;
+animation:back 20s linear infinite;
+}
+@keyframes back{
+100%{
+background-position:2000px 0;
+}
+}
+.text-box h3{
+font-size:40px;
+font-weight:600;
+}
+
+
 
 
 </style>
@@ -200,7 +232,11 @@ html {
     </ul>
   </div>
 </nav>
-
+<div class="text-box">
+  <p>Day</p>
+  <h1>Electronics</h1>
+  <h3>Home appliances and Electronic gadgets</h3>
+</div>
 
 
 <footer class="bg-dark text-center text-white">
