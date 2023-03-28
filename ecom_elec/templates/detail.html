@@ -21,11 +21,12 @@
     <div class="card-body">
         <h4 class="card-title">{{object.name }}</h4>
         <p class="card-text">{{object.description}}</p>
-        <p><a href="{{ object.follow_company }}">Follow Company</a> </p>
         <p>Price: $ {{ object.price|floatformat:2 }}</p>
+        <p><a href="{{ object.follow_company }}" class="btn btn-info" role="button">Follow Company</a></p>
+            <p><a href="{% url 'checkout' object.id %}" class="btn btn-outline-success" role="button">Add to cart</a>&nbsp<a href="{% url 'list' %}" class="btn btn-danger" role="button">Cancel Order</a></p>
         {% if object.stock_availability is True %}
 <a href="{% url 'checkout' object.id %}" class="btn btn-outline-success" role="button">Proceed to Pay</a>
-        <a href="{% url 'list' %}" class="btn btn-danger" role="button">Cancel Order</a>
+
 {% else %}
 <h4 class="text-danger">Out of Stock...!</h4>
 {% endif %}
