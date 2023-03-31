@@ -24,9 +24,11 @@
 html {
 	scroll-behaviour: smooth;
 }
+
 :root {
 	--navbar-height: 59px;
 }
+
 .navbar {
 	display: flex;
 	align-items: center;
@@ -36,6 +38,7 @@ html {
 	top: 0;
 	cursor: pointer;
 }
+
 
 .nav-list {
 	width: 100%;
@@ -48,10 +51,10 @@ html {
 }
 
 .nav-list li a {
-	font-size:2rem;
+	text-decoration: none;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	}
+	font-size:20px;
+}
 
 .nav-list li a:hover {
 text-decoration:none;
@@ -65,11 +68,37 @@ text-decoration:none;
 }
 .footer { background:
  black; }
+ p{
+ margin: 1px 1px ;
+ font-family:"Piazzolla", serif;
+ }
+.box{
+align:center;
+margin-left:25px;
+margin-top:25px;
+margin-right:25px;
+margin-bottom:95px;
+}
+.text-footer {
+	text-align: center;
+    color:blue;
+
+}
+footer{	padding: 0px 0;
+	font-family: "Ubuntu", sans-serif;
+	display: flex;
+	font-size:20px;
+	font-color:blue;
+	bottom:0px;
+	margin-bottom:0px;
+	justify-content: center;
+}
+
 
     </style>
 </head>
 <body>
-	<nav class="navbar background">
+<nav class="navbar background">
 
 		<!-- Creating the list of
 			items -->
@@ -79,82 +108,60 @@ text-decoration:none;
 			<li><a href="{% url 'accounts:contact' %}">Contact Us</a></li>
 			<li><a href="{%url 'accounts:about' %}">About Us</a></li>
 		</ul>
-
-		<!-- Create the search bar
-			and the button-->
-
-	</nav>
-
-    <p align="center">
-    <h1>New and used electronics</h1>
-    <h5>Some electronic stores carry new products that you can purchase.
+</nav>
+<div class="box">
+     <h1 align="center">About Us</h1>
+    <p style="color: black; font-size: 20px; align="left"> New and used electronics
+    Some electronic stores carry new products that you can purchase.
         However, there are times when the store has a section for pre-owned items as well.
-        This is great if you’re looking to save some money on your purchase but still want high-quality things.</h5>
-    </p>
-
-    <h1> Extended warranty</h1>
-    <h5>If you’re worried about your device breaking down,
+        This is great if you’re looking to save some money on your purchase but still want high-quality things.
+        Extended warranty If you’re worried about your device breaking down
         then an extended warranty may be the right choice for you.
         You can find this option with many electronic stores, and it will cover any malfunctions
-        or damages that happen to occur after purchase. It is great if something unexpected occurs.</h5>
-    </p>
-
-    <h1>Shop online</h1>
-    <h5>Many electronic stores will also sell their items through their website
+        or damages that happen to occur after purchase. It is great if something unexpected occurs.
+        Shop online Many electronic stores will also sell their items through their website
         so that you can shop for your new gadget from the comfort of your computer.
         Some websites are available 24 hours a day, while others have limited availability depending on time zones.
-        Regardless, it’s convenient to be able to get what you need without having to leave home.</h5>
-    </p>
-
-    <h1>Accessories</h1>
-    <h5>Electronics stores will also offer accessories for your devices.
+        Regardless, it’s convenient to be able to get what you need without having to leave home.
+    Accessories
+    Electronics stores will also offer accessories for your devices.
         You can find anything you need to go along with what you just bought!
-        From chargers to cases, the store is sure to have exactly what you’re looking for.</h5>
-    </p>
-
-    <h1>Expert advice</h1>
-    <h5>Lastly, many electronic stores will hire experts who are
+        From chargers to cases, the store is sure to have exactly what you’re looking for.
+    Expert advice
+    Lastly, many electronic stores will hire experts who are
         knowledgeable on all the products offered. They can help you make
         an informed purchase and ensure that you get what is best for your needs!
         This is especially great if it’s your first time buying something like this or
-        you don’t know much about electronics in general.</h5>
-    </p>
-
-    <h1>Gift cards</h1>
-    <h5>Many electronic stores will offer
+        you don’t know much about electronics in general.
+    Gift cards
+    Many electronic stores will offer
         gift cards for special occasions like birthdays or holidays.
         This is a great option because you can get something they want
         without having to guess what it might be! The store may also have
-        promotional offers where if you spend a certain amount, the card won’t cost you anything</h5>
-    </p>
+        promotional offers where if you spend a certain amount, the card won’t cost you anything
 
-     <h1>Return policy</h1>
-    <h5>Lastly, most electronic stores
+
+     Return policy
+    Lastly, most electronic stores
         will have a return policy if you’re not
         satisfied with your purchase.
         It is especially great if it’s because of damage or
         faulty workmanship. The store should always offer some
-        refund for these items so don’t worry.</h5>
-    </p>
-
-    <h1>Other offers</h1>
-    <h5>There are many other things that
+        refund for these items so don’t worry.
+    Other offers
+    There are many other things that
         an electronic store may offer as well.
         Depending on the shop, you might find discounts
         for your next purchase if you’ve made a return in the past,
-        or they always have special deals going on like buy one get one free.</h5>
-    </p>
+        or they always have special deals going on like buy one get one free.
 
+</div>
     <!-- Footer -->
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="/">Dayelectronics.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
+<footer class="background">
+		<p class="text-footer">
+			Copyright @-Dayelectronics
+		</p>
+	</footer>
 <!-- Footer -->
 
 </body>
