@@ -22,7 +22,7 @@
             <img src="{{each.image_url}}" class="card-img-top" alt=".." width="300" height="300">
             <div class="card-body">
                 <h5 class="card-title">{{each.name}}</h5>
-                <p class="card-text">Rs/-: {{each.price|floatformat:2}}</p>
+                <p class="card-text">${{each.price|floatformat:2}}</p>
                 {% if each.stock_availability is True %}
                 <button type="button" class="btn btn-success">Available</button>
                 {% else %}
