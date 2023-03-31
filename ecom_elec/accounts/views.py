@@ -60,6 +60,12 @@ def contact(request):
     context={}
     return render(request,template,context)
 
+def cart(request):
+    templates="accounts/cart.html"
+    context={}
+    return render(request,templates,context)
+
+
 def signout(request):
     logout(request)
     return redirect('login')

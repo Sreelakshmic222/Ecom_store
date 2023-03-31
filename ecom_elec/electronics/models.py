@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -20,3 +21,17 @@ class Order(models.Model):
     def __str(self):
         return self.product.name
 
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Elec, on_delete=models.CASCADE)
+    image_url = models.CharField(max_length = 2083, default=False)
+    quantity = models.PositiveIntegerField(default=1)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+
+class favorite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Elec, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    stock_availability = models.BooleanField(default=False)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image_url = models.CharField(max_length = 2083, default=False)
