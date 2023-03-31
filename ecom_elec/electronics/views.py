@@ -66,7 +66,7 @@ def cart(request):
 
 
 def add_fav(request, pk):
-    Product = get_object_or_404(Elec,id)
+    Product = get_object_or_404(Elec,pk=pk)
     favorite_item,created = favorite.objects.get_or_create(
         user=request.user,
         product= Product,

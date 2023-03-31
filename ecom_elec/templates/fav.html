@@ -371,13 +371,13 @@ a.list-group-item, .list-group-item-action {
                                 <div class="product-item">
                                     <a class="product-thumb" href="#"><img src="{{fav_item.image_url}}" alt="Product"></a>
                                     <div class="product-info">
-                                        <h4 class="product-title"><a href="{% url 'detail' fav_item.id %}">{{fav_item.product}}</a></h4>
+                                        <h4 class="product-title"><a href="{% url 'detail-view' fav_item.id %}">{{fav_item.product}}</a></h4>
                                         <div class="text-lg text-medium text-muted">{{fav_item.price}}</div>
                                         <div>Availability:
-                                          {% if fav_item.book_available == True %}
+                                          {% if fav_item.stock_availability == True %}
                                           <div class="d-inline text-success">Availability</div>
                                           {% else %}
-                                          <div class="d-inline text-success" style=color:red;>Outoff Stock</div>
+                                          <div class="d-inline text-success" style=color:red;>Out of Stock</div>
                                           {% endif %}
                                         </div>
                                         <div>Remove Now:
