@@ -1,19 +1,25 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+button hover{
+  color:Red;
+  }
+  </style>
+</head>
 <body style="background:url('https://t4.ftcdn.net/jpg/01/15/04/17/240_F_115041793_FZgCIE8USzIsi2MJudUMbVef3PiYSheX.jpg')no-repeat;background-size:cover;">
-  <section class="vh-1000">
+  <section class="vh-1000" style="color:Black";>
     <div class="container h-1000">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
-          <p><span class="h2">Shopping Cart </span>
+          <p><span class="h2" style="color:Black";>Shopping Cart </span>
           {% for cart_item in cart_items %}
-          <div class="card mb-4">
-            <div class="card-body p-4">
+          <div class="card mb-4" style="color:red";>
+            <div class="card-body p-4" style="color:red";>
 
-              <div class="row align-items-center">
-                <div class="col-md-2">
+              <div class="row align-items-center" style="color:red";>
+                <div class="col-md-2" style="color:red";>
                   <img src="{{cart_item.image_url}}"
                     class="img-fluid" alt="Generic placeholder image">
                 </div>
@@ -59,11 +65,11 @@
             </div>
           </div>
 
-          <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-left">
             {% if total == 0 %}
-            <a href="{% url 'list' %}"><button type="button" class="btn btn-light btn-lg ">Continue shopping</button></a>
+            <a href="{% url 'list' %}"><button type="button" class="btn btn-primary btn-lg ">Continue shopping</button></a>
             {% else %}
-            <a href="{% url 'list' %}"><button type="button" class="btn btn-light btn-lg ">Continue shopping</button></a>
+            <a href="{% url 'list' %}"><button type="button" class="btn btn-primary btn-lg ">Continue shopping</button></a>
             {% endif %}
 
           </div>
@@ -73,6 +79,5 @@
     </div>
   </section>
 </body>
-
 
 {% endblock %}

@@ -149,7 +149,7 @@ a.list-group-item {
 }
 a.list-group-item, .list-group-item-action {
     transition: all .25s;
-    color: #606975;
+    color: Black;
     font-weight: 500;
 }
 .with-badge {
@@ -298,7 +298,8 @@ a.list-group-item, .list-group-item-action {
 .wishlist-table .product-item .product-title>a,
 .order-table .product-item .product-title>a {
     transition: color .3s;
-    color: #374250;
+    color:#000000;
+    font-size:20px;
     line-height: 1.5;
     text-decoration: none
 }
@@ -306,7 +307,7 @@ a.list-group-item, .list-group-item-action {
 .shopping-cart .product-item .product-title>a:hover,
 .wishlist-table .product-item .product-title>a:hover,
 .order-table .product-item .product-title>a:hover {
-    color: #0da9ef
+    color:#Ff0000;
 }
 
 .shopping-cart .product-item .product-title small,
@@ -355,10 +356,7 @@ a.list-group-item, .list-group-item-action {
             <div class="padding-top-2x mt-2 hidden-lg-up"></div>
             <!-- Wishlist Table-->
             <div class="table-responsive wishlist-table margin-bottom-none">
-              
                 <table class="table">
-                  
-                  
                     <tbody>
                       <tr>
                         <th>Product Name</th>
@@ -373,13 +371,13 @@ a.list-group-item, .list-group-item-action {
                                         <div class="text-lg text-medium text-muted">{{fav_item.price}}</div>
                                         <div>Availability:
                                           {% if fav_item.stock_availability == True %}
-                                          <div class="d-inline text-success">Availability</div>
+                                          <div class="d-inline text-success">Availability<i class="fa fa-heart" style="font-size:18px;color:red"></i></div>
                                           {% else %}
-                                          <div class="d-inline text-success" style=color:red;>Out of Stock</div>
+                                          <div class="d-inline text-success" style="color:red;">Out of Stock</div>
                                           {% endif %}
                                         </div>
                                         <div>Remove Now:
-                                        <a href="{% url 'remove_from_fav' fav_item.id %}"><div class="d-inline text-success"><i class="fa fa-heart" style="font-size:18px;color:red"></i></div></a>
+                                        <a href="{% url 'remove_from_fav' fav_item.id %}"><div class="d-inline text-success"><i class="fa fa-heart" style="font-size:18px;color:black"></i></div></a>
                                     </div>
                                 </div>
                             </td>
