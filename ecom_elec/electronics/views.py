@@ -35,8 +35,8 @@ class SearchResultsView(ListView):
         query = self.request.GET.get('q')
         return Elec.objects.filter(Q(name=query)|Q(Company=query))
 
-def add_to_cart(request, pk):
-    Product = get_object_or_404(Elec, pk=pk)
+def add_to_cart(request,pk):
+    Product = get_object_or_404(Elec,pk=pk)
     cart_item,created = Cart.objects.get_or_create(
         user=request.user,
         product= Product,
